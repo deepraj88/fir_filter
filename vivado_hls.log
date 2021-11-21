@@ -1,0 +1,66 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1160.41.1.el7.x86_64) on Sun Nov 21 11:48:11 EST 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.9 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/small_projects/FIR_filter_vivado'
+INFO: [HLS 200-10] Opening project '/home/dss545/small_projects/FIR_filter_vivado/firExample.prj'.
+INFO: [HLS 200-10] Adding design file 'fir.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'fir_test.c' to the project
+INFO: [HLS 200-10] Opening solution '/home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'fir.c' ... 
+WARNING: [HLS 200-40] In file included from fir.c:1:
+fir.c:62:2: warning: implicitly declaring library function 'printf' with type 'int (const char *, ...)'
+ printf("Pragma: Unroll.\n");
+ ^
+fir.c:62:2: note: please include the header <stdio.h> or explicitly provide a declaration for 'printf'
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 541.871 ; gain = 4.219 ; free physical = 415913 ; free virtual = 594927
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 541.871 ; gain = 4.219 ; free physical = 415913 ; free virtual = 594927
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 541.871 ; gain = 4.219 ; free physical = 415878 ; free virtual = 594891
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 541.871 ; gain = 4.219 ; free physical = 415876 ; free virtual = 594890
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fir.c:53) in function 'fir' completely with a factor of 10.
+INFO: [XFORM 203-102] Partitioning array 'shift_reg' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'fir' (fir.c:7)...6 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 669.785 ; gain = 132.133 ; free physical = 415850 ; free virtual = 594864
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 669.785 ; gain = 132.133 ; free physical = 415858 ; free virtual = 594872
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.82 seconds; current allocated memory: 60.720 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 60.892 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'shift_reg_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 61.232 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 671.285 ; gain = 133.633 ; free physical = 415814 ; free virtual = 594829
+INFO: [SYSC 207-301] Generating SystemC RTL for fir.
+INFO: [VHDL 208-304] Generating VHDL RTL for fir.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir.
+INFO: [HLS 200-112] Total elapsed time: 13.32 seconds; peak allocated memory: 61.232 MB.

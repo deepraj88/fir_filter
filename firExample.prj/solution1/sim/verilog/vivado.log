@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Nov 19 13:34:41 2021
+# Process ID: 94657
+# Current directory: /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog
+# Command line: vivado -source open_wave.tcl
+# Log file: /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog/vivado.log
+# Journal file: /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx2018/Vivado/2018.3/data/ip'.
+current_fileset: Time (s): cpu = 00:00:37 ; elapsed = 00:00:14 . Memory (MB): peak = 6901.242 ; gain = 134.461 ; free physical = 61392 ; free virtual = 284129
+# open_wave_database fir.wdb
+open_wave_config /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog/fir.wcfg
+open_wave_database: Time (s): cpu = 00:00:19 ; elapsed = 00:00:05 . Memory (MB): peak = 7985.246 ; gain = 1074.992 ; free physical = 61290 ; free virtual = 284036
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 19 13:44:12 2021...

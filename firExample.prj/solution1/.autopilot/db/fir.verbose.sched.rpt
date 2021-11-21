@@ -1,0 +1,165 @@
+
+
+================================================================
+== Vivado HLS Report for 'fir'
+================================================================
+* Date:           Sun Nov 21 11:48:22 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        firExample.prj
+* Solution:       solution1
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.470|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|    2|    2|    2|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.47>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%x_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %x) nounwind" [fir.c:7]   --->   Operation 4 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%shift_reg_4_load = load i32* @shift_reg_4, align 16" [fir.c:69]   --->   Operation 5 'load' 'shift_reg_4_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (8.47ns)   --->   "%tmp_4_5 = mul nsw i32 %shift_reg_4_load, 500" [fir.c:70]   --->   Operation 6 'mul' 'tmp_4_5' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%shift_reg_3_load = load i32* @shift_reg_3, align 4" [fir.c:69]   --->   Operation 7 'load' 'shift_reg_3_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "store i32 %shift_reg_3_load, i32* @shift_reg_4, align 16" [fir.c:69]   --->   Operation 8 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (8.47ns)   --->   "%tmp_4_6 = mul nsw i32 %shift_reg_3_load, 313" [fir.c:70]   --->   Operation 9 'mul' 'tmp_4_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%shift_reg_2_load = load i32* @shift_reg_2, align 8" [fir.c:69]   --->   Operation 10 'load' 'shift_reg_2_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "store i32 %shift_reg_2_load, i32* @shift_reg_3, align 4" [fir.c:69]   --->   Operation 11 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%shift_reg_1_load = load i32* @shift_reg_1, align 4" [fir.c:69]   --->   Operation 12 'load' 'shift_reg_1_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "store i32 %shift_reg_1_load, i32* @shift_reg_2, align 8" [fir.c:69]   --->   Operation 13 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (8.47ns)   --->   "%tmp_4_8 = mul nsw i32 %shift_reg_1_load, -91" [fir.c:70]   --->   Operation 14 'mul' 'tmp_4_8' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%shift_reg_0_load = load i32* @shift_reg_0, align 16" [fir.c:69]   --->   Operation 15 'load' 'shift_reg_0_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "store i32 %shift_reg_0_load, i32* @shift_reg_1, align 4" [fir.c:69]   --->   Operation 16 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (8.47ns)   --->   "%tmp_6 = mul nsw i32 %x_read, 53" [fir.c:79]   --->   Operation 17 'mul' 'tmp_6' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "store i32 %x_read, i32* @shift_reg_0, align 16" [fir.c:80]   --->   Operation 18 'store' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 8.47>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%shift_reg_9_load = load i32* @shift_reg_9, align 4" [fir.c:69]   --->   Operation 19 'load' 'shift_reg_9_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (8.47ns)   --->   "%tmp_4 = mul nsw i32 %shift_reg_9_load, 53" [fir.c:70]   --->   Operation 20 'mul' 'tmp_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%shift_reg_8_load = load i32* @shift_reg_8, align 16" [fir.c:69]   --->   Operation 21 'load' 'shift_reg_8_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "store i32 %shift_reg_8_load, i32* @shift_reg_9, align 4" [fir.c:69]   --->   Operation 22 'store' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%shift_reg_7_load = load i32* @shift_reg_7, align 4" [fir.c:69]   --->   Operation 23 'load' 'shift_reg_7_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "store i32 %shift_reg_7_load, i32* @shift_reg_8, align 16" [fir.c:69]   --->   Operation 24 'store' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (8.47ns)   --->   "%tmp_4_2 = mul nsw i32 %shift_reg_7_load, -91" [fir.c:70]   --->   Operation 25 'mul' 'tmp_4_2' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%shift_reg_6_load = load i32* @shift_reg_6, align 8" [fir.c:69]   --->   Operation 26 'load' 'shift_reg_6_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "store i32 %shift_reg_6_load, i32* @shift_reg_7, align 4" [fir.c:69]   --->   Operation 27 'store' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%shift_reg_5_load = load i32* @shift_reg_5, align 4" [fir.c:69]   --->   Operation 28 'load' 'shift_reg_5_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "store i32 %shift_reg_5_load, i32* @shift_reg_6, align 8" [fir.c:69]   --->   Operation 29 'store' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (8.47ns)   --->   "%tmp_4_4 = mul nsw i32 %shift_reg_5_load, 313" [fir.c:70]   --->   Operation 30 'mul' 'tmp_4_4' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "store i32 %shift_reg_4_load, i32* @shift_reg_5, align 4" [fir.c:69]   --->   Operation 31 'store' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp3 = add i32 %tmp_4_5, %tmp_4_6" [fir.c:79]   --->   Operation 32 'add' 'tmp3' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 33 [1/1] (2.70ns)   --->   "%tmp4 = add i32 %tmp_4_8, %tmp_6" [fir.c:79]   --->   Operation 33 'add' 'tmp4' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%tmp2 = add i32 %tmp4, %tmp3" [fir.c:79]   --->   Operation 34 'add' 'tmp2' <Predicate = true> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 7.20>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %y) nounwind, !map !7"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %x) nounwind, !map !13"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @fir_str) nounwind"   --->   Operation 37 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (2.70ns)   --->   "%tmp1 = add i32 %tmp_4_2, %tmp_4_4" [fir.c:79]   --->   Operation 38 'add' 'tmp1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp = add i32 %tmp1, %tmp_4" [fir.c:79]   --->   Operation 39 'add' 'tmp' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 40 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%acc = add nsw i32 %tmp2, %tmp" [fir.c:79]   --->   Operation 40 'add' 'acc' <Predicate = true> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i32P(i32* %y, i32 %acc) nounwind" [fir.c:83]   --->   Operation 41 'write' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "ret void" [fir.c:84]   --->   Operation 42 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.47ns
+The critical path consists of the following:
+	wire read on port 'x' (fir.c:7) [16]  (0 ns)
+	'mul' operation ('tmp_6', fir.c:79) [42]  (8.47 ns)
+
+ <State 2>: 8.47ns
+The critical path consists of the following:
+	'load' operation ('shift_reg_9_load', fir.c:69) on static variable 'shift_reg_9' [17]  (0 ns)
+	'mul' operation ('tmp_4', fir.c:70) [18]  (8.47 ns)
+
+ <State 3>: 7.21ns
+The critical path consists of the following:
+	'add' operation ('tmp1', fir.c:79) [43]  (2.7 ns)
+	'add' operation ('tmp', fir.c:79) [44]  (0 ns)
+	'add' operation ('acc', fir.c:79) [48]  (4.5 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

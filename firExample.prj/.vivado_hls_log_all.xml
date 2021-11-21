@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_0' is power-on initialization." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:22.994-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_1' is power-on initialization." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:22.984-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_2' is power-on initialization." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:22.972-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_3' is power-on initialization." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:22.965-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_4' is power-on initialization." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:22.958-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_5' is power-on initialization." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:22.951-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_6' is power-on initialization." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:22.941-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_7' is power-on initialization." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:22.933-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_8' is power-on initialization." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:22.927-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'shift_reg_9' is power-on initialization." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:22.916-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from fir.c:1:&#xA;fir.c:62:2: warning: implicitly declaring library function 'printf' with type 'int (const char *, ...)'&#xA; printf(&quot;Pragma: Unroll.\n&quot;);&#xA; ^&#xA;fir.c:62:2: note: please include the header &lt;stdio.h> or explicitly provide a declaration for 'printf'&#xA;1 warning generated." projectName="firExample.prj" solutionName="solution1" date="2021-11-21T11:48:21.113-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

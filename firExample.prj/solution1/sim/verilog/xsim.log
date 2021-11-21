@@ -1,0 +1,84 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Nov 19 13:34:05 2021
+# Process ID: 87507
+# Current directory: /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/fir/xsim_script.tcl}
+# Log file: /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog/xsim.log
+# Journal file: /home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/fir/xsim_script.tcl
+# xsim {fir} -autoloadwcfg -tclbatch {fir.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source fir.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set y_group [add_wave_group y(wire) -into $coutputgroup]
+## add_wave /apatb_fir_top/AESL_inst_fir/y_ap_vld -into $y_group -color #ffff00 -radix hex
+## add_wave /apatb_fir_top/AESL_inst_fir/y -into $y_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set x_group [add_wave_group x(wire) -into $cinputgroup]
+## add_wave /apatb_fir_top/AESL_inst_fir/x -into $x_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_fir_top/AESL_inst_fir/ap_start -into $blocksiggroup
+## add_wave /apatb_fir_top/AESL_inst_fir/ap_done -into $blocksiggroup
+## add_wave /apatb_fir_top/AESL_inst_fir/ap_idle -into $blocksiggroup
+## add_wave /apatb_fir_top/AESL_inst_fir/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_fir_top/AESL_inst_fir/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_fir_top/AESL_inst_fir/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_fir_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_fir_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_fir_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_fir_top/LENGTH_y -into $tb_portdepth_group -radix hex
+## add_wave /apatb_fir_top/LENGTH_x -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_y_group [add_wave_group y(wire) -into $tbcoutputgroup]
+## add_wave /apatb_fir_top/y_ap_vld -into $tb_y_group -color #ffff00 -radix hex
+## add_wave /apatb_fir_top/y -into $tb_y_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_x_group [add_wave_group x(wire) -into $tbcinputgroup]
+## add_wave /apatb_fir_top/x -into $tb_x_group -radix hex
+## save_wave_config fir.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 20 [0.00%] @ "125000"
+// RTL Simulation : 1 / 20 [100.00%] @ "565000"
+// RTL Simulation : 2 / 20 [100.00%] @ "995000"
+// RTL Simulation : 3 / 20 [100.00%] @ "1425000"
+// RTL Simulation : 4 / 20 [100.00%] @ "1855000"
+// RTL Simulation : 5 / 20 [100.00%] @ "2285000"
+// RTL Simulation : 6 / 20 [100.00%] @ "2715000"
+// RTL Simulation : 7 / 20 [100.00%] @ "3145000"
+// RTL Simulation : 8 / 20 [100.00%] @ "3575000"
+// RTL Simulation : 9 / 20 [100.00%] @ "4005000"
+// RTL Simulation : 10 / 20 [100.00%] @ "4435000"
+// RTL Simulation : 11 / 20 [100.00%] @ "4865000"
+// RTL Simulation : 12 / 20 [100.00%] @ "5295000"
+// RTL Simulation : 13 / 20 [100.00%] @ "5725000"
+// RTL Simulation : 14 / 20 [100.00%] @ "6155000"
+// RTL Simulation : 15 / 20 [100.00%] @ "6585000"
+// RTL Simulation : 16 / 20 [100.00%] @ "7015000"
+// RTL Simulation : 17 / 20 [100.00%] @ "7445000"
+// RTL Simulation : 18 / 20 [100.00%] @ "7875000"
+// RTL Simulation : 19 / 20 [100.00%] @ "8305000"
+// RTL Simulation : 20 / 20 [100.00%] @ "8735000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 8775 ns : File "/home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/sim/verilog/fir.autotb.v" Line 284
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Nov 19 13:34:24 2021...

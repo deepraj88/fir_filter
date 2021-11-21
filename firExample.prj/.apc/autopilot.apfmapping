@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir.c" path="/home/dss545/small_projects/FIR_filter_vivado/fir.c"/>
+  </source>
+  <testbench>
+    <originFiles name="fir_test.c" path="/home/dss545/small_projects/FIR_filter_vivado/fir_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

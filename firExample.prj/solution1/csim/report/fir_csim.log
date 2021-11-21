@@ -1,0 +1,39 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../fir_test.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1127.18.2.el7.x86_64) on Fri Nov 19 13:16:51 EST 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.9 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/375901637345811302855
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../../fir.c in debug mode
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1127.18.2.el7.x86_64) on Fri Nov 19 13:17:05 EST 2021
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.9 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/small_projects/FIR_filter_vivado/firExample.prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/400281637345825155898
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+out = 0
+out = 53
+out = 106
+out = 68
+out = 30
+out = 305
+out = 1080
+out = 2168
+out = 3256
+out = 4253
+out = 5250
+out = 6300
+out = 7350
+out = 8400
+out = 9450
+out = 10500
+out = 11550
+out = 12600
+out = 13650
+out = 14700
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
